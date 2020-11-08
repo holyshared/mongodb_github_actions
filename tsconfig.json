@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "es2017",
+    "module": "commonjs",
+    "types": ["node", "mocha"],
+    "lib": ["es2017"],
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "outDir": "../dist/test"
+  },
+  "include": [
+    "src/__test__/*_spec.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
