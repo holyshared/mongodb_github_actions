@@ -6,7 +6,8 @@
   "author": "holyshared <holy.shared.design@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "build": "tsc --build tsconfig.json"
+    "build": "tsc --build tsconfig.json",
+    "test": "mocha --config=.mocharc.json dist"
   },
   "dependencies": {
     "mongodb": "^3.6.3",
