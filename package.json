@@ -10,7 +10,9 @@
     "test": "mocha --config=.mocharc.json dist"
   },
   "dependencies": {
+    "@typegoose/typegoose": "^7.4.2",
     "mongodb": "^3.6.3",
+    "mongoose": "^5.10.14",
     "power-assert": "^1.6.1"
   },
   "devDependencies": {

@@ -1,0 +1,14 @@
+version: '3.3'
+services:
+
+  # https://hub.docker.com/_/mongo
+  mongodb:
+    image: mongo:4.2
+    container_name: mongodb-primary
+    hostname: mongodb-primary
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: example
+      MONGO_INITDB_DATABASE: example
+    ports:
+      - 27017:27017
