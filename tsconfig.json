@@ -6,6 +6,8 @@
     "lib": ["es2017"],
     "esModuleInterop": true,
     "resolveJsonModule": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
     "outDir": "./dist/test"
   },
   "include": [
