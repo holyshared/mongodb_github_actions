@@ -12,3 +12,5 @@ services:
       MONGO_INITDB_DATABASE: example
     ports:
       - 27017:27017
+    volumes:
+      - ./docker/mongo/init:/docker-entrypoint-initdb.d/
