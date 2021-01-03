@@ -6,11 +6,17 @@ services:
     image: mongo:4.2
     container_name: mongodb-primary
     hostname: mongodb-primary
+    command: >
+      mongod
+      --port 27017
+      --replSet replset
+      --auth --keyFile /etc/mongod-keyfile
     environment:
       MONGO_INITDB_ROOT_USERNAME: root
       MONGO_INITDB_ROOT_PASSWORD: example
       MONGO_INITDB_DATABASE: example
+    volumes:
+      - ./docker/mongo/scripts:/root:ro
+      - ./docker/mongo/etc/mongod-keyfile:/etc/mongod-keyfile:ro
     ports:
       - 27017:27017
-    volumes:
-      - ./docker/mongo/initdb.d:/docker-entrypoint-initdb.d/
